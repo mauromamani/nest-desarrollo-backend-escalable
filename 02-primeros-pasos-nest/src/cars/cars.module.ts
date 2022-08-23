@@ -4,6 +4,16 @@ import { CarsService } from './cars.service';
 
 @Module({
   controllers: [CarsController],
-  providers: [CarsService],
+  providers: [
+    CarsService,
+    // Este Pipe se usara solo en el modulo "cars"
+    // {
+    //   provide: APP_PIPE,
+    //   useValue: new ValidationPipe({
+    //     whitelist: true,
+    //     forbidNonWhitelisted: true,
+    //   }),
+    // },
+  ],
 })
 export class CarsModule {}
