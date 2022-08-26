@@ -15,5 +15,6 @@ import { CarsService } from './cars.service';
     //   }),
     // },
   ],
+  exports: [CarsService],
 })
 export class CarsModule {}

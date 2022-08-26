@@ -11,8 +11,7 @@ import { ICar } from './interfaces/car.interface';
 @Injectable()
 export class CarsService {
   private cars: Array<ICar> = [
-    { id: uuid(), brand: 'Toyota', model: 'Corolla' },
-    { id: uuid(), brand: 'Honda', model: 'Civic' },
+    // { id: uuid(), brand: 'Toyota', model: 'Corolla' },
   ];
 
   getAllCars() {
@@ -56,5 +55,9 @@ export class CarsService {
     this.cars = this.cars.filter((c) => c.id !== id);
 
     return car;
+  }
+
+  fillCarsWithSeed(cars: Array<ICar>) {
+    this.cars.push(...cars);
   }
 }
