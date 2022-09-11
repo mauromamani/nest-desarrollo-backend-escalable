@@ -1,6 +1,6 @@
-###################
+##################################
 # BUILD FOR LOCAL DEVELOPMENT
-###################
+##################################
 
 FROM node:18-alpine As development
 
@@ -15,9 +15,9 @@ COPY --chown=node:node . .
 
 USER node
 
-###################
+###########################
 # BUILD FOR PRODUCTION
-###################
+###########################
 
 FROM node:18-alpine As build
 
